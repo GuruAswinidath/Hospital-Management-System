@@ -100,10 +100,10 @@ public class Hosptial1{
                 Main1.medical();
             }
             
-           /*  else if(choice.equals("6")){    //It connets to the blood donor
-                Blood medical=new Blood();
-                Blood.blood();
-            }*/
+             else if(choice.equals("6")){    //It connets to the blood donor
+                Phone BinaryTree=new Phone();
+                Phone.BinaryTree();
+                }
 
             else if(choice.equals("7")){
                 System.out.println("\n Welcome to check up menu \n");
