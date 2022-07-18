@@ -273,19 +273,7 @@ public void take_order()
         }while(Medicine_choice_mismatch==1 || Medicine_choice_temp < 1 || Medicine_choice_temp > 10);  // repeat loop until valid Medicine choice code is entered
         
         Medicine_choice.add(Medicine_choice_temp); // add selected Medicine code to arraylist
-        
-      /*   char size_choice_temp;
-        do{
-        	 System.out.print("\n\t\t\t\tPick a quantity ");
-             size_choice_temp= sc.next().charAt(0);
-             
-	        // check whether Medicine is entered correctly
-	        if(size_choice_temp != 'l' && size_choice_temp != 'L' && size_choice_temp != 't'&& size_choice_temp != 'T')
-	        	System.out.println("\n\t\t\t\tInvalid Medicine size! Please Enter size again. quantity");
-	     // repeat loop until a valid size is entered   
-        }while(size_choice_temp != 'l' && size_choice_temp != 'L' && size_choice_temp != 't'&& size_choice_temp != 'T');
-
-        size_choice.add(size_choice_temp); // add selected Medicine size to arraylist*/
+       
 
         int qty_temp=1;
         int mismatch_flag=0;
