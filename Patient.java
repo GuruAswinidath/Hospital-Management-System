@@ -53,14 +53,6 @@ public class Patient {
         this.B_P=B_P;
     }
 
-    public void setGender(String Gender){
-        this.Gender=Gender;
-    }
-
-    public void Date_Birth(String Date_Birth){
-        this.Date_Birth=Date_Birth;
-    }
-
     public Object getId() {
         return Id;
     }
