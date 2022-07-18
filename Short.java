@@ -25,7 +25,7 @@ public class Short {
  
     public void dijkstra_algorithm(double adjacency_matrix[][])
     {
-        int source=0;  // source is always set to 0 i.e. pizza shop
+        int source=0;  // source is always set to 0 
         int evaluationNode;
 
         // copy the adj matrix passed in as parameter to the class variable
