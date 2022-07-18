@@ -13,8 +13,6 @@ public class Hosptial1{
     static DoctorList dlist=new DoctorList();
     public static void main(String[] args){
 
-       
-        
         writeDFile();
 
         readDFile();
@@ -35,21 +33,7 @@ public class Hosptial1{
 
                 String Contact = validate_mobile();
 
-                
-                /*do{
-                    //System.out.print("\n\t\t\t\tEnter mobile number : ");      // input mobile number
-                    //Contact = sc.next();
-                    if(!validate_mobile(Contact)){           // ask for mobile number again if the input is not correct
-                        System.out.println("\n\t\t\t\tPlease enter a valid mobile number! ");
-                        
-                    }
-                    //}while(validate_mobile(Contact)==false);  // repeat the loop until a valid mobile number is entered
-                    
-                /*if(Contact>n){
-                    System.out.println("Invalid Contact Number");
-                else 
-                    System.out.println(Contact);    
-                }*/
+            
 
                 System.out.println("\n Doctor specilization");
                 String spec=sc2.nextLine();
@@ -60,7 +44,7 @@ public class Hosptial1{
 
                 Doctor d=new Doctor(id,name,Contact,spec,fees);
                 dlist.Insert(d);
-                System.out.println("Added Successfully");
+                System.out.println("Successfully added");
 
             }
 
@@ -77,12 +61,12 @@ public class Hosptial1{
                 String contact=sc.nextLine();*/
 
                 System.out.println("\n Patient Blood group");
-                String B_Group=sc.nextLine();
+                String b_Group=sc.nextLine();
 
                 System.out.println("\n Patient Blood pressure");
-                String B_P=sc.nextLine();
+                String b_P=sc.nextLine();
 
-                Patient patient=new Patient(id,name,Contact,B_Group,B_P);
+                Patient patient=new Patient(id,name,Contact,b_Group,b_P);
                 plist.Insert(patient);
                 System.out.println("Added the patient successfully");
 
@@ -100,7 +84,7 @@ public class Hosptial1{
                 Main1.medical();
             }
             
-             else if(choice.equals("6")){    //It connets to the blood donor
+             else if(choice.equals("6")){    //It contact the doctors
                 Phone BinaryTree=new Phone();
                 Phone.BinaryTree();
                 }
@@ -189,11 +173,11 @@ public class Hosptial1{
 
         System.out.println("\n Doctor Contacts");
         String contact=sc.next();
-    // check if length of input is 10 digits
-    if(contact.length()!=10){
+        // check if length of input is 10 digits
+        if(contact.length()!=10){
         System.out.println("Invalid");
         validate_mobile();
-    }
+     }
     
     
         // check whether any character other than digits 0-9 is present in input
@@ -208,7 +192,7 @@ public class Hosptial1{
      
     
 
-    return contact;   
+        return contact;   
     }
 
 
@@ -218,11 +202,11 @@ public class Hosptial1{
 
         System.out.println("\n Patient Contacts");
         String contact=sc.next();
-    // check if length of input is 10 digits
-    if(contact.length()!=10){
+     // check if length of input is 10 digits
+        if(contact.length()!=10){
         System.out.println("Invalid");
-        validate_mobile();
-    }
+        mobile_Number();
+        }
     
     
         // check whether any character other than digits 0-9 is present in input
@@ -233,8 +217,8 @@ public class Hosptial1{
             mobile_Number();
             }
         }   
-    return contact;   
-}
+     return contact;   
+    }
 
 
 
@@ -248,14 +232,13 @@ public class Hosptial1{
         System.out.println("\n Enter the 3 for print all the Doctor");
         System.out.println("\n Enter the 4 for the print all the paitents");
         System.out.println("\n Enter the 5 for  purpose of medicine online");
-        System.out.println("\n Enter the 6 for the Blood donor");
+        System.out.println("\n Enter the 6 for the contract of list");
         System.out.println("\n Enter the 7 for checkup memu");
         System.out.println("\n Enter the 8 for exit");
 
     }
 
     private static void writeDFile(){
-        System.out.println("Hello world");
         try{
             String data="";
             for(int i=0;i<dlist.size();i++){
@@ -282,7 +265,7 @@ public class Hosptial1{
             Scanner myReader=new Scanner(myObj);
             while(myReader.hasNextLine()){
                 String data=myReader.nextLine();
-                if(data.length()>5){
+                if(data.length()>7){
                     String [] cus=data.split(";");
                     plist.Insert(new Patient(cus[0],cus[1],cus[2],cus[3],cus[4]));
 
