@@ -4,9 +4,6 @@ class PNode{
     Patient patient;
     PNode next,prev;
 
-    public PNode(){
-
-    } 
 
     public PNode(Patient patient){
         this.patient=patient;
